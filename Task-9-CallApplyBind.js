@@ -24,3 +24,21 @@ function print(){
 var bound=print.bind(student)
 console.log(bound())
 // 4)
+
+// From second video -> code like the way the youtuber does
+
+let multiply = function (x, y){
+    console.log(x * y)
+}
+
+let multiplyByTwo = multiply.bind(this, 2)
+multiplyByTwo(5) // 5 = y value
+
+let multiplyByThree = multiply.bind(this, 3)
+multiplyByThree(5) // 5 = y value
+
+let multiplyByFour = multiply.bind(this, 4, 5)
+multiplyByFour()
+
+// Currying using bind method
+
