@@ -27,18 +27,33 @@ console.log(bound())
 
 // From second video -> code like the way the youtuber does
 
-let multiply = function (x, y){
-    console.log(x * y)
+// let multiply = function (x, y){
+//     console.log(x * y)
+// }
+
+// let multiplyByTwo = multiply.bind(this, 2)
+// multiplyByTwo(5) // 5 = y value
+
+// let multiplyByThree = multiply.bind(this, 3)
+// multiplyByThree(5) // 5 = y value
+
+// let multiplyByFour = multiply.bind(this, 4, 5)
+// multiplyByFour()
+
+// // Currying using bind method
+
+let multiply = function (x){
+  return function(y){
+      console.log(x * y)
+  }
 }
 
-let multiplyByTwo = multiply.bind(this, 2)
-multiplyByTwo(5) // 5 = y value
+let multiplyByTwo = multiply(2)
+multiplyByTwo(3)
 
-let multiplyByThree = multiply.bind(this, 3)
-multiplyByThree(5) // 5 = y value
+let multiplyByThree = multiply(3)
+multiplyByThree(3)
 
-let multiplyByFour = multiply.bind(this, 4, 5)
-multiplyByFour()
+// Currying using closers
 
-// Currying using bind method
 
