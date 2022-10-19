@@ -25,12 +25,21 @@ this.garage = {
 //     }
 // }
 
-let createRoom = function (name){  // 7) 'this' inside a constructor
-    this.table = `${name}s table`
+class createRoom{  // 8) 'this' inside a class
+    constructor(name){
+        this.table = `${name}s table`
+    }
+    cleanTable(soap){
+        console.log(`cleaning ${this.table} using ${soap}`);
+    }
 }
-createRoom.prototype.cleanTable = function(soap){  // 7) 'this' inside a constructor
-    console.log(`cleaning ${this.table} using ${soap}`);
-}
+
+// let createRoom = function (name){  // 7) 'this' inside a constructor
+//     this.table = `${name}s table`
+// }
+// createRoom.prototype.cleanTable = function(soap){  // 7) 'this' inside a constructor
+//     console.log(`cleaning ${this.table} using ${soap}`);
+// }
 
 const jillRoom = new createRoom('jill');  // 7) 'this' inside a constructor
 const johnsRoom = new createRoom('john');  // 7) 'this' inside a constructor
