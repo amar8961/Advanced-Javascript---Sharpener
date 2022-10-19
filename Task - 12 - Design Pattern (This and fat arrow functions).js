@@ -95,3 +95,31 @@ var z = (...n) => {
 };
 
 z(1,2,3);
+
+// second part 2) no. Task Answer
+
+class Student {
+    constructor(name, age, marks){
+        this.name = name;
+        this.age = age;
+        this.marks = marks;
+    }
+    setPlacementAge(minPlacementAge){
+        console.log(this);
+        return(minMarks) => {
+            console.log('inside egligibleForCurrentCompany' , this)
+            if(this.marks > minMarks && this.age > minPlacementAge){
+                console.log(this.name + " is ready for palcements")
+            } else {
+                console.log(this.name + " is not ready for placement")
+            }
+        }
+    }
+    
+}
+
+const Amar = new Student('Amar', 25 , 75 );
+const Soni = new Student('Soni', 13 , 35 );
+
+Amar.setPlacementAge(18)(40);
+Soni.setPlacementAge(18)(40);
