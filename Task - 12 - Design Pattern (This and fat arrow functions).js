@@ -51,3 +51,47 @@ johnsRoom.cleanTable('some soap');  // 7) 'this' inside a constructor
 // this.garage.cleanTable()  // 3) 'this' inside a method
 // cleanTable.call(this.garage,'some soap');  // 5) call function to rescue
 // cleanTable.call(johnsRoom,'some soap');  // 5) call function to rescue
+
+
+// second part
+// 1) fat arrow function
+let getA = a => a;
+console.log(getA(1));  // 1
+// 2) fat arrow function
+let square = a => a*a;
+console.log(square(2));  // 4
+// 3)
+let square1 = (a) => { return a*a };
+console.log(square1(2)) // 4
+// 4)
+var a = 4
+let square2 = () => { return a*a };
+console.log(square2())  // 16
+// 5)
+var a = 4
+let square3 = _ => { return a*a };
+console.log(square3())  // 16
+// 6)
+let mult = (a,b) => { return a*b};
+console.log(mult(2,4));  // 8
+// 7)
+var x = function (){
+    this.val = 1
+    setTimeout(() => {
+        this.val++;
+        console.log(this.val)
+    },1)
+}
+var xx = new x()  // 2
+// 8) Regular function
+var y = function(){
+    console.log(arguments[0])  // 1
+};
+
+y(1,2,3);
+// 9) fat arrow function
+var z = (...n) => {
+    console.log(n[0])  // 1
+};
+
+z(1,2,3);
