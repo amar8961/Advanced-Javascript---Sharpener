@@ -96,7 +96,8 @@ var z = (...n) => {
 
 z(1,2,3);
 
-// second part 2) no. Task Answer
+// second part 
+// modified for 3) no. Question Answer
 
 class Student {
     constructor(name, age, marks){
@@ -105,13 +106,16 @@ class Student {
         this.marks = marks;
     }
     setPlacementAge(minPlacementAge){
-        console.log(this);
+        // console.log(this);
         return(minMarks) => {
-            console.log('inside egligibleForCurrentCompany' , this)
-            if(this.marks > minMarks && this.age > minPlacementAge){
-                console.log(this.name + " is ready for palcements")
-            } else {
-                console.log(this.name + " is not ready for placement")
+            // console.log('inside egligibleForCurrentCompany' , this)
+            // if(this.marks > minMarks && this.age > minPlacementAge){
+            //     console.log(this.name + " is ready for palcements")
+            // } else {
+            //     console.log(this.name + " is not ready for placement")
+            // }
+            if(this.marks > minMarks){
+                console.log(this.name + " is egligible")
             }
         }
     }
