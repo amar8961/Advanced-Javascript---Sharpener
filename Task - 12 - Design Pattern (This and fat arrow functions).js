@@ -1,20 +1,23 @@
-// this inside a global scope
+// 1) this inside a global scope
 this.table = 'window table'; 
 // console.log(window.table);  // output -> 'window table'
+const cleanTable = function(){  // 4) this inside a function
+    console.log(`cleaning ${this.table}`);
+}
 
 this.garage = {
     table: 'garage table',
-    cleanTable(){  // this inside a method
+    cleanTable(){  // 3) this inside a method
         console.log(`cleaning ${this.table}`)
     }
 };
-// this inside an object
+// 2) this inside an object
 let johnsRoom ={
     table: 'johns table',
-    cleanTable(){  // this inside a method
+    cleanTable(){  // 3) this inside a method
         console.log(`cleaning ${this.table}`)
     }
 }
 console.log(johnsRoom.table)
-johnsRoom.cleanTable()  // this inside a method
-this.garage.cleanTable()  // this inside a method
+johnsRoom.cleanTable()  // 3) this inside a method
+this.garage.cleanTable()  // 3) this inside a method
